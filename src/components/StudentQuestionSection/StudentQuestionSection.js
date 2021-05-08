@@ -33,6 +33,10 @@ function StudentQuestionSection({
     setEditingAnswer(true);
   }, [studentQuestionData.currentQuestion]);
 
+  useEffect(() => {
+    setShortAnswer('');
+  }, [studentQuestionData]);
+
   function handleSubmitAnswer(e) {
     e.preventDefault();
     setEditingAnswer(false);
